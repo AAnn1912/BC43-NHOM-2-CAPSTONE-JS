@@ -1,0 +1,15 @@
+
+@mixin text($fz:$fs-1,$fw:$fw-light,$c:$text-c0) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($padding,$color,$fs,$bg,$brd) {
+    padding: $padding;
+    color: $color;
+    font-size: $fs;
+    background: $bg;
+    border-radius: $brd;
+    cursor: pointer;
+}
