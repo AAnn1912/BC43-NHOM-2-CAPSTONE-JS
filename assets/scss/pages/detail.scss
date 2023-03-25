@@ -1,0 +1,116 @@
+.carousel {
+    margin-top: 50px;
+    background-image: url(/assets/img/image\ 6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    width: 100%;
+    .container {
+        .carousel-flex {
+            display: flex;
+            .carousel-img {
+                padding-bottom: 70px;
+                img {
+                    padding-left: 40px;
+                    align-items: center;
+                }
+            }
+            .carousel-content {
+                padding-top: 80px;
+                h1 {}
+                p {
+                    font-size: 16px;
+                    opacity: 0.7;
+                }
+
+                button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #F8B653;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        margin-top: 30px;
+        .container{
+            .carousel-flex{
+                padding-bottom: 30px;
+                .carousel-img{
+                    width: 65%;
+                    img{
+                        width: 99.5%;
+                        height: 99.5%;
+                    }
+                }
+                .carousel-content{
+                    width: 35%;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) and (max-width: 768px){
+        .container{
+            margin-top: 0px;
+            .carousel-flex{
+                padding-bottom: 50px;
+                .carousel-img{
+                    width: 50%;
+                    padding-bottom: 0px;
+                    img{
+                        padding-left: 20px;
+                        width: 99.9%;
+                        height: 99.9%;
+                    }
+                }
+                .carousel-content{
+                    width: 50%;
+                    padding-top: 0px;   
+                    line-height: 1;
+                    h1 {
+                        font-size: 38px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                    button {
+                        padding: 10px 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 375px) and (max-width: 576px) {
+        .container{ 
+            margin-top: 0px;
+            .carousel-flex{
+                padding-bottom: 70px;
+                .carousel-img{
+                    width: 50%;
+                    padding-bottom: 0px;
+                    img{
+                        padding-left: 20px;
+                        width: 99.9%;
+                        height: 99.9%;
+                    }
+                }
+                .carousel-content{
+                    width: 50%;
+                    padding-top: 0px;   
+                    line-height: 1;
+                    h1 {}
+                    p {
+                        font-size: 15px;
+                    }
+                    button {
+                        padding: 10px 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
