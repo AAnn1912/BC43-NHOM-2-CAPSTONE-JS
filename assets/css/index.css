@@ -195,6 +195,7 @@
 }
 .products .container .list-item .products-item .card {
   margin: 1%;
+  height: 100%;
 }
 .products .container .list-item .products-item .card .item-image {
   display: flex;
@@ -234,6 +235,10 @@
 .products .container .list-item .products-item .card .products-body .products-btn .btn-products:hover {
   background-color: #44d8a4;
   color: white;
+}
+.products .container .list-item .products-item .card .products-body .products-btn .btn-products a {
+  text-decoration: none;
+  color: #000;
 }
 .products .container .list-item .products-item .card .products-body .products-btn .price {
   width: 50%;
