@@ -55,26 +55,74 @@
     <section id="body">
       <h3>Register</h3>
       <div class="container">
-        <input type="text" class="form-control" placeholder="Email" />
-        <input type="text" class="form-control" placeholder="Name" />
-        <input type="text" class="form-control" placeholder="Password" />
-        <input type="text" class="form-control" placeholder="Phone" />
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Password Confirm"
-        />
-        <div class="gender">
-          <label for="">Gender</label>
-          <label>
-            <input type="radio" checked="checked" name="radio" />
-            <span class="checkmark"></span>Male
-          </label>
-          <label>
-            <input type="radio" name="radio" />
-            <span class="checkmark"></span>Female
-          </label>
-          <button class="submit">Submit</button>
+        <div class="form_input">
+          <div class="form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              id="email"
+            />
+            <span id="error-email"></span>
+            <span id="error-required-email"></span>
+          </div>
+          <div class="form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              id="name"
+            />
+            <span id="error-name"></span>
+            <span id="error-required-name"></span>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              id="pass"
+            />
+            <span id="error-pass"></span>
+            <span id="error-required-pass"></span>
+          </div>
+          <div class="form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Phone"
+              id="phone"
+            />
+            <span id="error-phone"></span>
+            <span id="error-required-phoneư"></span>
+          </div>
+          <div class="form">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password Confirm"
+              id="pass_confirm"
+            />
+            <span id="error-pass_confirm"></span>
+            <span id="error-required-pass_confirm"></span>
+          </div>
+          <div class="gender">
+            <label for="">Gender</label>
+            <label>
+              <input type="radio" checked="checked" name="radio" value="true" />
+              <span class="checkmark"></span>Male
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="radio"
+                checked="checked"
+                value="false"
+              />
+              <span class="checkmark"></span>Female
+            </label>
+            <button class="submit">Submit</button>
+          </div>
         </div>
       </div>
     </section>
@@ -136,6 +184,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-    <script src="./controllers/register.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="./controllers/register.js"></script>
   </body>
 </html>

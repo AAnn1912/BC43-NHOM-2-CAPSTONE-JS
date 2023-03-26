@@ -79,19 +79,26 @@
         margin: 1% 8% 10px 0;
     }
     .container {
+        .form_input {
         display: grid;
         grid-template-columns: auto auto;
         gap: 30px;
-        .form-control {
-            border-width: 0 0 5px 0;
-            transition: none;
-            border-color: #ccc;
-            border-radius: 0;
-            &:focus {
-                box-shadow: none;
-                border-color:#ae18e2;
-                transition: all 0.75s;
+        .form {
+            .form-control {
+                border-width: 0 0 5px 0;
+                transition: none;
+                border-color: #ccc;
+                border-radius: 0;
+                &:focus {
+                    box-shadow: none;
+                    border-color:#ae18e2;
+                    transition: all 0.75s;
+                }
             }
+            span {
+
+            }
+
         }
         .gender {
             position: relative;
@@ -111,7 +118,6 @@
                     font-size: 15px;
                     margin-left: 5px;
                 }
-                
                 input {
                     width: 25px;
                     height: 25px;
@@ -163,6 +169,7 @@
         }
         @media screen and (min-width:1px) and (max-width:375px) {
             grid-template-columns: auto;
+        }
         }
     }
 }

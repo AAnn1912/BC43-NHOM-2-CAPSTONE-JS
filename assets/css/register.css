@@ -66,74 +66,74 @@
   text-align: center;
   margin: 1% 8% 10px 0;
 }
-#body .container {
+#body .container .form_input {
   display: grid;
   grid-template-columns: auto auto;
   gap: 30px;
 }
-#body .container .form-control {
+#body .container .form_input .form .form-control {
   border-width: 0 0 5px 0;
   transition: none;
   border-color: #ccc;
   border-radius: 0;
 }
-#body .container .form-control:focus {
+#body .container .form_input .form .form-control:focus {
   box-shadow: none;
   border-color: #ae18e2;
   transition: all 0.75s;
 }
-#body .container .gender {
+#body .container .form_input .gender {
   position: relative;
 }
 @media screen and (min-width: 575px) and (max-width: 767px) {
-  #body .container .gender {
+  #body .container .form_input .gender {
     width: 105%;
   }
 }
-#body .container .gender label {
+#body .container .form_input .gender label {
   font-size: 30px;
   margin-left: 15px;
 }
 @media screen and (max-width: 768px) {
-  #body .container .gender label {
+  #body .container .form_input .gender label {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 574px) {
-  #body .container .gender label {
+  #body .container .form_input .gender label {
     font-size: 25px;
   }
 }
 @media screen and (min-width: 1px) and (max-width: 375px) {
-  #body .container .gender label {
+  #body .container .form_input .gender label {
     font-size: 15px;
     margin-left: 5px;
   }
 }
-#body .container .gender label input {
+#body .container .form_input .gender label input {
   width: 25px;
   height: 25px;
 }
 @media screen and (min-width: 575px) and (max-width: 767px) {
-  #body .container .gender label input {
+  #body .container .form_input .gender label input {
     width: 15px;
     height: 15px;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 574px) {
-  #body .container .gender label input {
+  #body .container .form_input .gender label input {
     height: 20px;
   }
 }
 @media screen and (min-width: 1px) and (max-width: 375px) {
-  #body .container .gender label input {
+  #body .container .form_input .gender label input {
     height: 10px;
   }
 }
-#body .container .gender label .checkmark {
+#body .container .form_input .gender label .checkmark {
   padding: auto;
 }
-#body .container .gender .submit {
+#body .container .form_input .gender .submit {
   position: absolute;
   bottom: -70px;
   left: 15px;
@@ -144,36 +144,36 @@
   font-size: 25px;
 }
 @media screen and (max-width: 768px) {
-  #body .container .gender .submit {
+  #body .container .form_input .gender .submit {
     font-size: 20px;
     padding: 10px 40px;
   }
 }
 @media screen and (min-width: 575px) and (max-width: 767px) {
-  #body .container .gender .submit {
+  #body .container .form_input .gender .submit {
     padding: 5px 35px;
     bottom: -45px;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 574px) {
-  #body .container .gender .submit {
+  #body .container .form_input .gender .submit {
     left: 30%;
   }
 }
 @media screen and (min-width: 1px) and (max-width: 375px) {
-  #body .container .gender .submit {
+  #body .container .form_input .gender .submit {
     padding: 5px 25px;
     bottom: -50px;
     left: 25%;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 574px) {
-  #body .container {
+  #body .container .form_input {
     grid-template-columns: auto;
   }
 }
 @media screen and (min-width: 1px) and (max-width: 375px) {
-  #body .container {
+  #body .container .form_input {
     grid-template-columns: auto;
   }
 }
