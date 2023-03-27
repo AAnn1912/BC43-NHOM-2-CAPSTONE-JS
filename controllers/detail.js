@@ -1,41 +1,41 @@
 window.onload = function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('id');
-    console.log('params', myParam)
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get("id");
+  console.log("params", myParam);
 
-    // Call API load lên giao diện
-    function getAPIDetail() {
-        var promise = axios({
-            url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${myParam}`,
-            method: 'GET',
-            ResponseType: JSON,
-        });
+  // Call API load lên giao diện
+  function getAPIDetail() {
+    var promise = axios({
+      url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${myParam}`,
+      method: "GET",
+      ResponseType: "JSON",
+    });
 
-        // Thành công
-        promise.then(function (res) {
-            console.log('Kết quả', res.data.content);
-            var product = res.data.content;
-            renderAPIDetail(product);
-            renderProduct(product.relatedProducts);
-        })
-        // Thất bại
-        promise.catch(function (err) {
-            console.error('err');
-        })
-    };
-    getAPIDetail();
-}
+    // Thành công
+    promise.then(function (res) {
+      console.log("Kết quả", res.data.content);
+      var product = res.data.content;
+      renderAPIDetail(product);
+      renderProduct(product.relatedProducts);
+    });
+    // Thất bại
+    promise.catch(function (err) {
+      console.error(err);
+    });
+  }
+  getAPIDetail();
+};
 function renderAPIDetail(dataEntry) {
-    var arrSize = dataEntry.size;
-    var stringSize ='';
-    for (var index = 0; index < arrSize.length; index++) {
-        var prodsize = arrSize[index];
-        stringSize += `
+  var arrSize = dataEntry.size;
+  var stringSize = "";
+  for (var index = 0; index < arrSize.length; index++) {
+    var prodsize = arrSize[index];
+    stringSize += `
             <button class="sizes">${prodsize}</button>
-        `
-    }
-    console.log(stringSize);
-    var prodDetailString = `
+        `;
+  }
+  console.log(stringSize);
+  var prodDetailString = `
             <div class="container ">
                 <div class="content_left">
                     <img src="${dataEntry.image}" alt="..." />
@@ -61,14 +61,14 @@ function renderAPIDetail(dataEntry) {
                     </div>
                 </div>
             </div>
-        `
-     document.getElementById('products_detail').innerHTML = prodDetailString;
+        `;
+  document.getElementById("products_detail").innerHTML = prodDetailString;
 }
 function renderProduct(dataEntry) {
-    var htmlString = '';
-    for (var index = 0; index < dataEntry.length; index++) {
-        var prod = dataEntry[index];
-        htmlString += `
+  var htmlString = "";
+  for (var index = 0; index < dataEntry.length; index++) {
+    var prod = dataEntry[index];
+    htmlString += `
         <div class="products-item">
             <div class="card">
                 <div class="item-image">
@@ -80,13 +80,13 @@ function renderProduct(dataEntry) {
                         <span>${prod.shortDescription}</span>
                     </div>
                     <div class="products-btn">
-                        <button class="btn-products"><a href="../detail.html?id=${prod.id}">Buy now</a></button>
+                        <button class="btn-products"><a href="../detail.html?id=${prod.id}" style="text-decoration:none;color: black; font-style: normal">Buy now</a></button>
                         <p class="price">${prod.price}$</p>
                     </div>
                 </div>
             </div>
         </div>
-        `
-        document.querySelector('.list-item').innerHTML = htmlString;
-    }
-};
+        `;
+    document.querySelector(".list-item").innerHTML = htmlString;
+  }
+}

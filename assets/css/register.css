@@ -2,10 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
-  font-family: sans-serif;
-=======
->>>>>>> phamthienan
 }
 
 #header .top_header {
@@ -20,21 +16,14 @@
 #header .top_header .container .left_content .logo {
   line-height: 45px;
 }
-<<<<<<< HEAD
-=======
 #header .top_header .container .left_content .logo img {
   background-color: white;
 }
->>>>>>> phamthienan
 #header .top_header .container .right_content a {
   text-decoration: none;
   margin-left: 10px;
   color: white;
 }
-<<<<<<< HEAD
-#header .menu {
-  margin: 15px 0;
-=======
 #header .top_header .container .right_content a i {
   font-size: 16px;
 }
@@ -45,7 +34,6 @@
 }
 #header .menu .container {
   margin-top: 10px;
->>>>>>> phamthienan
 }
 #header .menu .container a {
   text-decoration: none;
@@ -71,69 +59,6 @@
   transition: all 0.5s;
 }
 
-<<<<<<< HEAD
-.products .container .title {
-  text-align: center;
-  padding: 30px 0;
-}
-.products .container .list-item {
-  display: flex;
-  flex-wrap: wrap;
-}
-.products .container .list-item .products-item {
-  width: 33.3333333333%;
-}
-@media screen and (max-width: 768px) {
-  .products .container .list-item .products-item {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 576px) {
-  .products .container .list-item .products-item {
-    width: 100%;
-  }
-}
-.products .container .list-item .products-item .card {
-  margin: 1%;
-}
-.products .container .list-item .products-item .card .products-body {
-  padding: 20px;
-}
-.products .container .list-item .products-item .card .products-body .info {
-  margin-bottom: 10px;
-}
-.products .container .list-item .products-item .card .products-body .info .name {
-  font-size: 20px;
-  padding: 0;
-  margin: 0;
-}
-.products .container .list-item .products-item .card .products-body .info span {
-  font-size: 13px;
-  opacity: 0.7;
-}
-.products .container .list-item .products-item .card .products-body .products-btn {
-  display: flex;
-}
-.products .container .list-item .products-item .card .products-body .products-btn .btn-products {
-  width: 50%;
-  background-color: #F8B653;
-  color: #000000;
-  border: none;
-  font-style: italic;
-  padding: 10px 0;
-  transition: all 0.5s;
-}
-.products .container .list-item .products-item .card .products-body .products-btn .btn-products:hover {
-  background-color: #44d8a4;
-  color: white;
-}
-.products .container .list-item .products-item .card .products-body .products-btn .price {
-  width: 50%;
-  background-color: #D9D9D9;
-  text-align: right;
-  padding: 10px 15px;
-  margin-bottom: 0;
-=======
 #body {
   margin-bottom: 10%;
 }
@@ -284,13 +209,18 @@
   margin: 0;
   width: 110%;
 }
+@media screen and (min-width: 375px) and (max-width: 574px) {
+  #footer .top_content .container .content_top p {
+    width: 100%;
+  }
+}
 #footer .top_content .container .content_top p a {
   text-decoration: none;
   color: #000;
 }
 @media screen and (min-width: 375px) and (max-width: 574px) {
   #footer .top_content .container .content_top p a {
-    margin-right: 10%;
+    margin-right: 0%;
   }
 }
 @media screen and (min-width: 1px) and (max-width: 375px) {
@@ -427,5 +357,4 @@
     display: block;
     text-align: center;
   }
->>>>>>> phamthienan
 }

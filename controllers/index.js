@@ -1,18 +1,25 @@
 function saveProduct(data) {
-    var arrProduct = [];
-    for (let index = 0; index < data.length; index++) {
-        if ((index == 9) || (index == 10) || (index == 11) || (index == 12) || (index == 14) || (index == 15)) {
-            arrProduct.push(data[index]);
-        }
+  var arrProduct = [];
+  for (let index = 0; index < data.length; index++) {
+    if (
+      index == 9 ||
+      index == 10 ||
+      index == 11 ||
+      index == 12 ||
+      index == 14 ||
+      index == 15
+    ) {
+      arrProduct.push(data[index]);
     }
-    renderProduct(arrProduct);
+  }
+  renderProduct(arrProduct);
 }
 // render dữ liệu lên giao diện
 function renderProduct(dataEntry) {
-    var htmlString = '';
-    for (var index = 0; index < dataEntry.length; index++) {
-        var prod = dataEntry[index];
-        htmlString += `
+  var htmlString = "";
+  for (var index = 0; index < dataEntry.length; index++) {
+    var prod = dataEntry[index];
+    htmlString += `
         <div class="products-item">
             <div class="card">
                 <div class="item-image">
@@ -30,27 +37,27 @@ function renderProduct(dataEntry) {
                 </div>
             </div>
         </div>
-        `
-        document.querySelector('.list-item').innerHTML = htmlString;
-    }
-};
+        `;
+    document.querySelector(".list-item").innerHTML = htmlString;
+  }
+}
 
 // CALL API lấy dữ liệu Product về
 function getProductData() {
-    var promise = axios({
-        url: 'https://shop.cyberlearn.vn/api/Product',
-        method: 'GET',
-        ResponseType: JSON,
-    });
+  var promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Product",
+    method: "GET",
+    ResponseType: JSON,
+  });
 
-    // Thành công
-    promise.then(function (res) {
-        console.log('Kết quả', res.data.content);
-        saveProduct(res.data.content);
-    })
-    // Thất bại
-    promise.catch(function (err) {
-        console.error('err');
-    })
+  // Thành công
+  promise.then(function (res) {
+    console.log("Kết quả", res.data.content);
+    saveProduct(res.data.content);
+  });
+  // Thất bại
+  promise.catch(function (err) {
+    console.error("err");
+  });
 }
 getProductData();

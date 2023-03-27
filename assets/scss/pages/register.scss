@@ -203,11 +203,14 @@
                 p {
                     margin: 0;
                     width: 110%;
+                    @media screen and (min-width:375px) and (max-width:574px) {
+                        width: 100%;
+                    }
                     a {
                         text-decoration: none;
                         color: #000;
                         @media screen and (min-width:375px) and (max-width:574px) {
-                            margin-right: 10%;
+                            margin-right: 0%;
                         }
                         @media screen and (min-width:1px) and (max-width:375px) {
                             margin-right: 10%;
