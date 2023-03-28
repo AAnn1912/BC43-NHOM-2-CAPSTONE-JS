@@ -51,7 +51,7 @@ function renderAPIDetail(dataEntry) {
                         ${stringSize}
                     </div>
                     <div class="cost">
-                        <span>${dataEntry.price}</span>
+                        <span>${dataEntry.price}$</span>
                     </div>
                     <div class="push_cart">
                         <button class="except"><span>-</span></button>
@@ -80,7 +80,7 @@ function renderProduct(dataEntry) {
                         <span>${prod.shortDescription}</span>
                     </div>
                     <div class="products-btn">
-                        <button class="btn-products"><a href="../detail.html?id=${prod.id}" style="text-decoration:none;color: black; font-style: normal">Buy now</a></button>
+                        <button class="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
                         <p class="price">${prod.price}$</p>
                     </div>
                 </div>
