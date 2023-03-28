@@ -87,9 +87,10 @@
 }
 #products_detail .container .content_left img {
   height: 115%;
+  width: 90%;
   background-color: #f8f8f8;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   #products_detail .container .content_left img {
     height: 70%;
   }
